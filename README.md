@@ -1,24 +1,43 @@
-Download Node.js from https://nodejs.org/en/download
-Export PATH=$PATH"/usr/local/bin
-Download Visual coder studio editor from https://code.visualstudio.com/download
-Create a new **Project** with **Package.Json** file. Package.Json is created within the project directory **npm -i init** 
-Open the Project directory and verify Package.Json file in it.
-**cd/your/project/path** and install cypress via **npm install cypress --save -dev** in the terminal of the project directory.
-After installing cypress download the source code from this repo in the project directory locally to run the automations.
-Make sure your test specs directory is specified as per your local directories in the cypress.config.js file. Please see the attached config for reference.
+# Taraqi Automation
 
-const { defineConfig } = require("cypress");
-      module.exports = defineConfig({
-        e2e: {
-          setupNodeEvents(on, config) {
-            // implement node event listeners here
-          },
-          specPattern:'cypress/e2e/taraqi/*.js'
-        },
-      });
+**NOTE** : Must have node and npm install.
+In case Node.js is not installed it can be downloaded from [here](https://nodejs.org/en/download). 
 
-Cypress test spec files should always be in the e2e directory to run via Test Runner.
-Install npm i moment in cypress which is s JavaScript date library for parsing, validating, manipulating, and formatting dates.
-After you have installed and made required configuration changes run **npx cypress open** in the terminal of the proejct directory.
-Select the E2E testing from the Test Runner, configure it and click on the taraqi.js file.
-Automations will start running.
+## Dependency Installation
+
+To install all required project dependencies use:
+
+`npm install`
+
+or
+
+`yarn` if you have it installed
+
+## Running Test Cases 
+
+To run the test cases use:
+
+`npx cypress open`
+
+
+After running the given command, Cypress Test 
+
+- Runner will open.
+Click on the E2E.
+![Alt text](image.png)
+- Select E2E testing in chrome.
+![Alt text](image-1.png)
+
+- Select the taraqi.spec file
+![Alt text](image-2.png)
+
+- Test Cases Passed
+![Alt text](image-3.png)
+
+<a href="https://www.loom.com/share/3e315b5b1bf144d6aa152481921a877b">
+    <p>Test Run</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/3e315b5b1bf144d6aa152481921a877b-with-play.gif">
+  </a>
+
+
+
